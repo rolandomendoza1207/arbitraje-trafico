@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitraje de Tráfico - Guía Real para Principiantes</title>
+    
+    <!-- ============================================ -->
+    <!-- ⚠️ MONETAG POP-UNDER - PEGA AQUÍ EL CÓDIGO 1 -->
+    <!-- ============================================ -->
+    <!-- Busca en Monetag: Sitios > Tu dominio > Pop-under > Copiar código -->
+    <!-- Pégalo justo debajo de esta línea -->
+    
+    <!-- FIN POP-UNDER -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* ============================================ */
+        /* ⚠️ BANNER SUPERIOR - PEGA AQUÍ EL CÓDIGO 2   */
+        /* ============================================ */
+        /* Busca en Monetag: Sitios > Tu dominio > Display Banner > 728x90 */
+        /* Pégalo justo debajo de esta línea */
+        
+        /* FIN BANNER SUPERIOR */
+        
+        .banner-top {
+            width: 100%;
+            min-height: 90px;
+            background: #1e293b;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 14px;
+            border: 2px dashed #334155;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #22c55e20;
+            color: #22c55e;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+        
+        .results-box {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 2px solid #22c55e;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .results-box h2 {
+            color: #22c55e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .numbers {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .number-item {
+            text-align: center;
+        }
+        
+        .number-item .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffffff;
+            display: block;
+        }
+        
+        .number-item .label {
+            color: #64748b;
+            font-size: 0.9em;
+        }
+        
+        .profit {
+            color: #22c55e !important;
+        }
+        
+        .section {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+        }
+        
+        .section h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #94a3b8;
+            margin: 20px 0 10px;
+            font-size: 1.1em;
+        }
+        
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .section ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .section ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+        }
+        
+        .mistake {
+            color: #ef4444;
+        }
+        
+        .success {
+            color: #22c55e;
+        }
+        
+        /* ============================================ */
+        /* ⚠️ BANNER MEDIO - PEGA AQUÍ EL CÓDIGO 3      */
+        /* ============================================ */
+        /* Busca en Monetag: Sitios > Tu dominio > Display Banner > 728x90 o 300x250 */
+        /* Pégalo justo debajo de esta línea */
+        
+        /* FIN BANNER MEDIO */
+        
+        .banner-mid {
+            width: 100%;
+            min-height: 250px;
+            background: #1e293b;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 14px;
+            border: 2px dashed #334155;
+        }
+        
+        /* ============================================ */
+        /* ⚠️ BOTÓN SMARTLINK - PEGA AQUÍ TU ENLACE      */
+        /* ============================================ */
+        /* Reemplaza la URL en href por tu SmartLink de Monetag */
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 18px 30px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(34, 197, 94, 0.5);
+        }
+        
+        /* FIN BOTÓN SMARTLINK */
+        
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        
+        .faq-item .question {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .faq-item .answer {
+            color: #94a3b8;
+        }
+        
+        /* ============================================ */
+        /* ⚠️ BANNER INFERIOR - PEGA AQUÍ EL CÓDIGO 4   */
+        /* ============================================ */
+        /* Busca en Monetag: Sitios > Tu dominio > Display Banner > 728x90 */
+        /* Pégalo justo debajo de esta línea */
+        
+        /* FIN BANNER INFERIOR */
+        
+        .banner-bottom {
+            width: 100%;
+            min-height: 90px;
+            background: #1e293b;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 14px;
+            border: 2px dashed #334155;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+        
+        /* ============================================ */
+        /* ⚠️ MONETAG VIGNETTE - PEGA AQUÍ EL CÓDIGO 5  */
+        /* ============================================ */
+        /* Busca en Monetag: Sitios > Tu dominio > Vignette (Interstitial) > Copiar código */
+        /* Pégalo justo debajo de esta línea */
+        
+        /* FIN VIGNETTE */
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .numbers {
+                flex-direction: column;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- BANNER SUPERIOR -->
+        <div class="banner-top">
+            ⚠️ ESPACIO PARA BANNER 728x90 — Pega aquí el código de Monetag Banner
+        </div>
+        
+        <header>
+            <div class="badge">✅ PROBADO CON DINERO REAL</div>
+            <h1>Arbitraje de Tráfico Para Principiantes</h1>
+            <p class="subtitle">Resultados reales de un experimento de 30 días sin vender humo</p>
+        </header>
+        
+        <!-- CAJA DE RESULTADOS -->
+        <div class="results-box">
+            <h2>📊 Resultados del Experimento</h2>
+            <div class="numbers">
+                <div class="number-item">
+                    <span class="value">$30</span>
+                    <span class="label">Invertido</span>
+                </div>
+                <div class="number-item">
+                    <span class="value">$87.40</span>
+                    <span class="label">Retorno</span>
+                </div>
+                <div class="number-item">
+                    <span class="value profit">+$57.40</span>
+                    <span class="label">Ganancia Neta</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECCIÓN ¿QUÉ ES? -->
+        <div class="section">
+            <h2>🤔 ¿Qué es el Arbitraje de Tráfico?</h2>
+            <p>Es simple: compras visitas baratas en plataformas de anuncios y las monetizas por más dinero con publicidad y ofertas.</p>
+            
+            <h3>Ejemplo real:</h3>
+            <ul>
+                <li>Compré 1.000 visitas por $5 en una plataforma de anuncios</li>
+                <li>Esas 1.000 visitas generaron $12.40 en ingresos publicitarios</li>
+                <li><strong>Ganancia neta: $7.40</strong></li>
+            </ul>
+            <p style="margin-top:15px;">Repite esto cientos de veces y los números empiezan a tener sentido.</p>
+        </div>
+        
+        <!-- BANNER MEDIO -->
+        <div class="banner-mid">
+            ⚠️ ESPACIO PARA BANNER 300x250 o 728x90 — Pega aquí el código de Monetag Banner
+        </div>
+        
+        <!-- SECCIÓN CÓMO LO HICE -->
+        <div class="section">
+            <h2>🛠️ ¿Cómo lo hice? (Paso a paso)</h2>
+            <ol style="padding-left:20px;">
+                <li style="margin-bottom:10px;">Creé una página web simple con contenido sobre herramientas digitales</li>
+                <li style="margin-bottom:10px;">En cada artículo puse botones de "Descargar recurso" o "Acceder a herramientas"</li>
+                <li style="margin-bottom:10px;">Esos botones redirigen a ofertas que pagan por visita o acción</li>
+                <li style="margin-bottom:10px;">Compré tráfico barato apuntando a esos artículos</li>
+                <li style="margin-bottom:10px;">Mantuve un tracking con Google Sheets para cortar lo que no funcionaba</li>
+            </ol>
+            <p style="margin-top:15px;">El secreto no está en el tráfico barato. Está en encontrar la combinación correcta entre audiencia, contenido y oferta.</p>
+        </div>
+        
+        <!-- BOTÓN SMARTLINK PRINCIPAL -->
+        <!-- ⚠️ CAMBIA EL href POR TU SMARTLINK DE MONETAG ⚠️ -->
+        <a href="https://omg10.com/4/11455102" class="cta-button" target="_blank" rel="noopener">
+            🔗 ACCEDER A LAS HERRAMIENTAS GRATIS
+        </a>
+        <p style="text-align:center;color:#64748b;font-size:0.9em;margin-top:-10px;">
+            Incluye: plataformas de tráfico, red de monetización, plantilla de tracking y calculadora
+        </p>
+        
+        <!-- SECCIÓN ERRORES -->
+        <div class="section">
+            <h2>📚 Lo que aprendí (errores que no debes cometer)</h2>
+            <ul>
+                <li class="mistake"><strong>❌ No compres tráfico sin tracking</strong> — es tirar dinero a ciegas</li>
+                <li class="mistake"><strong>❌ No uses pop-ups agresivos</strong> — la gente rebota en segundos</li>
+                <li class="mistake"><strong>❌ No prometas dinero fácil en tus anuncios</strong> — atrae al público equivocado</li>
+                <li class="success"><strong>✅ Haz contenido que realmente ayude</strong> — los clics genuinos convierten mejor</li>
+                <li class="success"><strong>✅ Empieza con $5 por fuente</strong> — prueba barato, escala lo que funciona</li>
+                <li class="success"><strong>✅ Documenta todo</strong> — sin datos estás adivinando</li>
+            </ul>
+        </div>
+        
+        <!-- BANNER INFERIOR -->
+        <div class="banner-bottom">
+            ⚠️ ESPACIO PARA BANNER 728x90 — Pega aquí el código de Monetag Banner
+        </div>
+        
+        <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+        <div class="section">
+            <h2>❓ Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <p class="question">¿Necesito saber programar?</p>
+                <p class="answer">No. Usé herramientas sin código y una web simple como esta.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">¿Cuánto dinero necesito para empezar?</p>
+                <p class="answer">Con $10-20 USD puedes hacer tu primera prueba real.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">¿Es legal?</p>
+                <p class="answer">Totalmente. Es marketing digital básico. Compras visitas y las monetizas.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">¿En cuánto tiempo veo resultados?</p>
+                <p class="answer">Mi primera prueba rentable fue en la semana 2. Depende de tu testing.</p>
+            </div>
+        </div>
+        
+        <!-- BOTÓN SMARTLINK SECUNDARIO -->
+        <!-- ⚠️ CAMBIA EL href POR TU SMARTLINK DE MONETAG ⚠️ -->
+        <a href="https://omg10.com/4/11455102" class="cta-button" target="_blank" rel="noopener">
+            🚀 QUIERO EMPEZAR AHORA
+        </a>
+        
+        <footer>
+            <p>© 2024 - Guía gratuita de arbitraje de tráfico. Sin cursos, sin mentiras, solo resultados reales.</p>
+            <p style="margin-top:10px;">¿Preguntas? Déjalas en el hilo de Reddit donde encontraste este sitio.</p>
+        </footer>
+        
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- ⚠️ CÓDIGOS DE MONETAG QUE DEBES PEGAR       -->
+    <!-- ============================================ -->
+    <!-- 
+         INSTRUCCIONES:
+         
+         1. Entra a monetag.com → Panel → Sitios → Añadir tu dominio
+         2. Una vez aprobado, ve a "Ad Units" o "Formatos"
+         3. Genera estos 5 códigos y pégalos donde corresponda:
+         
+         CÓDIGO 1 → Pop-under (línea 10)
+         CÓDIGO 2 → Banner 728x90 superior (línea 45)
+         CÓDIGO 3 → Banner 300x250 medio (línea 155)
+         CÓDIGO 4 → Banner 728x90 inferior (línea 222)
+         CÓDIGO 5 → Vignette/Interstitial (línea 243)
+         
+         SMARTLINK → Ya está puesto en los 2 botones (líneas 193 y 257)
+                      Si cambia tu SmartLink, actualiza los href
+    -->
+    
+</body>
+</html>
